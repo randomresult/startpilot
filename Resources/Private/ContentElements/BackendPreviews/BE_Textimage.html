@@ -1,3 +1,11 @@
 <div style="width:100%;background:#eaeaea; border:solid 1px #cccccc; margin-top: 10px; padding: 5px;">
 	<b>Text with Image | Image positions: {imageposition}</b>
+	<sp:fal data="{_all}">
+		<f:for each="{items}" as="item">
+			<f:image image="{item}" width="250"/>
+		</f:for>
+	</sp:fal>
+	<f:if condition="{bodytext}">
+		{bodytext->f:format.html()->f:format.crop(maxCharacters: 300, respectWordBoundaries: 1, respectHtml: 1)}
+	</f:if>
 </div>
