@@ -26,3 +26,5 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['default'] = 'EXT:startpilot/Confi
 TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig(
     '<INCLUDE_TYPOSCRIPT: source="DIR:EXT:startpilot/Configuration/UserTSConfig">'
 );
+
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['sp'][] = 'Vendor\\Yourext\\ViewHelpers';
